@@ -4,5 +4,9 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-
+config.workspace = true
+appstate.workspace = true
+tokio.workspace = true
+rusqlite.workspace = true
+webserver.workspace = true
 
