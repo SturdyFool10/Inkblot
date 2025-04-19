@@ -1,0 +1,32 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+default-members = ["crates/rustcanvas"]
+
+[workspace.dependencies]
+axum = { version = "0.8.3", features = ["tokio", "ws"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+tokio = { version = "1.44.2", features = ["full"] }
+hex = "0.4.3"
+spacetimedb-sdk = "1.1.0"
+
+[profile.dev]
+opt-level = 0
+incremental = true
+debug = true
+overflow-checks = true
+panic = "unwind"
+codegen-units = 256
+lto = "off"
+strip = "none"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+debug = false
+overflow-checks = false
+panic = "abort"
+codegen-units = 1
+strip = "symbols"
