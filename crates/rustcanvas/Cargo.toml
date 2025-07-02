@@ -7,6 +7,11 @@ edition = "2024"
 config.workspace = true
 appstate.workspace = true
 tokio.workspace = true
-rusqlite.workspace = true
 webserver.workspace = true
-
+axum.workspace = true
+db.workspace = true
+macros.workspace = true
+raw-cpuid.workspace = true
+prettylogs.workspace = true
+tracing.workspace = true
+futures.workspace = true

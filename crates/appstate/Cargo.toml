@@ -6,3 +6,5 @@ edition = "2024"
 [dependencies]
 config.workspace = true
 tokio.workspace = true
+db.workspace = true
+axum.workspace = true
